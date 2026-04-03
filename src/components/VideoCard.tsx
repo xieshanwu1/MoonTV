@@ -278,7 +278,7 @@ export default function VideoCard({
         {!isLoading && <ImagePlaceholder aspectRatio='aspect-[2/3]' />}
         {/* 图片 */}
         <Image
-          src={processImageUrl(actualPoster)}
+          src={`/api/image-proxy?url=${encodeURIComponent(actualPoster)}`}
           alt={actualTitle}
           fill
           className='object-cover'
